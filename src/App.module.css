@@ -1,0 +1,58 @@
+.header__nav {
+  display: flex;
+  overflow: hidden;
+}
+
+.header__logo {
+  flex: 1; /*grow to take as much space as needed*/
+  display: flex;
+  position: relative;
+  padding: 20px;
+  > h4 {
+    padding-left: 30px;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: var(--playfair-display);
+    color: #fff;
+    opacity: 0.8;
+  }
+}
+
+.header__logo_overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  z-index: -1;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 20px;
+  list-style: none;
+  gap: 64px;
+  flex: 1.2;
+  > li {
+    font-weight: 500;
+    font-family: var(--plus-jakarta-sans);
+    color: var(--secondary-color);
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 20px;
+    cursor: pointer;
+    > img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+  }
+}
+
+.header__menu_mobile {
+  display: none;
+  gap: 20px;
+  position: relative;
+}
