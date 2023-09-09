@@ -34,7 +34,7 @@
   padding: 20px;
   list-style: none;
   gap: 64px;
-  flex: 1.2;
+  flex: 1.236;
   > li {
     font-weight: 500;
     font-family: var(--plus-jakarta-sans);
@@ -55,4 +55,676 @@
   display: none;
   gap: 20px;
   position: relative;
+}
+
+/* HERO SECTION */
+
+.hero {
+  display: flex;
+  min-height: calc(100vh - 74px);
+  overflow: hidden;
+}
+
+.hero_image {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: relative; /*dont really get this*/
+  z-index: 5;
+  > img {
+    width: 120%;
+    height: 100%;
+    object-fit: contain;
+  }
+  > h2 {
+    position: absolute; /*this makes it appear on top of the image*/
+    bottom: 0;
+    padding: 20px;
+    font-family: var(--playfair-display);
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 138px;
+    color: white;
+  }
+}
+
+.hero_image__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  z-index: -1;
+}
+
+.hero_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1.22;
+}
+
+.hero_content_info {
+  padding: 64px;
+  flex: 1; /*seems to fill the avaliable space*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  > h1 {
+    font-size: 80px;
+    font-weight: 600px;
+    font-family: var(--playfair-display);
+    color: var(--secondary-color);
+  }
+  > p {
+    margin: 32px 0px 0px 32px;
+    font-family: var(--plus-jakarta-sans);
+    color: vaR(--secondary-color);
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+.hero_content__buttons {
+  margin: 41px 0px 0px 41px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+}
+
+.hero_content__order_button {
+  border-radius: 36px;
+  padding: 20px;
+  min-width: 212px;
+  outline: none;
+  border: none;
+  background-color: var(--secondary-color);
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.hero_content__play_button {
+  border: none;
+  outline: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--black-200);
+  font-family: var(--plus-jakarta-sans);
+  cursor: pointer;
+  > img {
+    margin-right: 12px;
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+  }
+}
+
+.hero_content__testimonial {
+  padding: 32px 64px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: var(--color-white);
+}
+
+.hero_content__customer {
+  flex: 1;
+  gap: 10px;
+  > h4 {
+    font-size: 62px;
+    font-weight: 400;
+    font-family: var(--playfair-display);
+  }
+  > p {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--plus-jakarta-sans);
+    color: var(--secondary-color);
+    opacity: 0.5;
+  }
+}
+
+.hero_content__review {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(2, 2, 2, 0.1);
+  min-width: 200px;
+  > img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+  }
+  > p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 32px;
+    font-family: var(--plus-jakarta-sans);
+    color: var(--secondary-color);
+    opacity: 0.5;
+  }
+}
+
+/* ABOUT US SECTION */
+
+.about_us {
+  display: flex;
+  min-height: 720px;
+  overflow: hidden;
+}
+
+.about_us__image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--color-white);
+  position: relative;
+  > div {
+    padding: 32px 64px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.about_us__image_sushi3 {
+  border-bottom: 8px solid var(--color-creamson);
+  background-image: url("./assets/about_bg1.png");
+  > img {
+    width: 225px;
+    height: 200px;
+  }
+}
+
+.about_us__image_sushi2 {
+  background-image: url("./assets/about_bg2.png");
+  > img {
+    width: 240px;
+    height: 160px;
+  }
+}
+
+.about_us__button {
+  position: absolute;
+  right: 0;
+  padding: 12px 32px;
+  min-height: 64px;
+  background: var(--secondary-color);
+  border-radius: 32px 0px 0px 32px;
+  color: white;
+  font-family: var(--plus-jakarta-sans);
+  font-size: 18px;
+  line-height: 23px;
+  cursor: pointer;
+  > img {
+    object-fit: contain;
+    margin-left: 32px;
+  }
+}
+
+.about_us__content {
+  padding: 64px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Popular Foods*/
+
+.popular_foods {
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  background-image: url(./assets/popular_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;
+}
+
+.popular_foot__title {
+  font-size: 56px;
+  font-family: var(--playfair-display);
+  font-weight: 600;
+  line-height: 78px;
+  color: white;
+  text-align: center;
+}
+
+.popular_foods__filters {
+  margin-top: 48px;
+  max-width: 100%;
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.popular_foods__filter_btn,
+.popular_foods__filter_btn_active {
+  padding: 10px 28px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 46px;
+
+  font-size: 16px;
+  font-weight: 300px;
+  font-family: var(--plus-jakarta-sans);
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    color: var(--primary-color);
+  }
+
+  > img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+  }
+}
+
+.popular_foods__filter_btn_active {
+  background-color: white;
+  color: var(--primary-color);
+}
+
+.popular_foods__catalogue {
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 56px;
+}
+
+.popular_foods__button {
+  width: fit-content;
+  padding: 20px 30px;
+  margin: 80px auto 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  font-family: var(--plus-jakarta-sans);
+  color: white;
+  background: var(--secondary-color);
+  border-radius: 64px;
+  cursor: pointer;
+
+  > img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    margin-left: 21px;
+  }
+}
+
+/* Catalogue */
+
+.popular_foods__card {
+  padding: 38px;
+  min-width: 260px;
+  height: fit-content;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  border-radius: 36px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  > img {
+    width: 110px;
+    height: 84px;
+    object-fit: contain;
+  }
+}
+
+.popular_foods__card_title {
+  margin-top: 47px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: var(--playfair-display);
+  color: white;
+  text-align: center;
+}
+
+.popular_foods__card_details {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.popular_foods__card_rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  > img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  > p {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: var(--plus-jakarta-sans);
+    color: white;
+  }
+}
+
+.popular_foods__card_price {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--plus-jakarta-sans);
+  color: white;
+}
+
+.popular_foods__card.active {
+  background: white;
+  min-width: 340px;
+}
+
+.popular_foods__card.active .popular_foods__card_img {
+  width: 214px;
+  height: 160px;
+}
+
+.popular_foods__card.active .popular_foods__card_title {
+  color: var(--black-500);
+  font-size: 32px;
+}
+
+.popular_foods__card.active .popular_foods__card_rating {
+  > img {
+    width: 32px;
+    height: 32px;
+  }
+  > p {
+    font-size: 24px;
+    color: var(--gray-100);
+  }
+}
+
+.popular_foods__card.active .popular_foods__card_price {
+  font-size: 24px;
+  color: var(--secondary-color);
+}
+
+/*trending section*/
+
+.trending {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.trending__button {
+}
+
+.trending__sushi,
+.trending__drink {
+  width: 100%;
+  min-height: 640px;
+  display: flex;
+  flex-direction: row;
+}
+
+.trending__content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 32px 64px;
+}
+
+.trending__list {
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 20px;
+  > li {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 12px;
+    min-width: 210px;
+  }
+}
+
+.trending__icon {
+  width: 24px;
+  height: 24px;
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  > img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+  }
+  > p {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--plus-jakarta-sans);
+  }
+}
+
+.trending__image {
+  position: relative;
+  padding: 32px 64px;
+  background-color: var(--color-white);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  > img {
+    width: 254px;
+    height: 260px;
+    object-fit: contain;
+  }
+  flex: 1;
+}
+
+.trending__discover {
+  position: absolute;
+  top: 44%;
+  left: 44%;
+  z-index: 1;
+  width: 160px;
+  height: 160px;
+  background-color: var(--secondary-color);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > p {
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--plus-jakarta-sans);
+  }
+}
+
+/* Arrows */
+.trending__arrow {
+  position: absolute;
+  z-index: 1;
+}
+
+.trending__arrow img {
+  object-fit: contain;
+}
+
+.trending__arrow_left {
+  left: -2.5px;
+  top: 12%;
+}
+
+.trending__arrow_left img,
+.trending__arrow_top img {
+  width: auto;
+  height: 100%;
+}
+
+.trending__arrow_top {
+  top: -10.5px;
+  left: 12%;
+}
+
+.trending__arrow_bottom {
+  bottom: -6.5px;
+  right: 12%;
+}
+
+.trending__arrow_bottom img,
+.trending__arrow_right img {
+  width: 100%;
+  height: auto;
+}
+
+.trending__arrow_right {
+  right: -2.5px;
+  bottom: 12%;
+}
+
+/*SUBSCRIBE*/
+
+.subscription {
+  padding: 64px;
+  background-color: var(--primary-color);
+  background-image: url(./assets/subscribe_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-direction: column;
+  overflow: hidden;
+  > h2 {
+    font-size: 88px;
+    font-family: var(--playfair-display);
+    font-weight: 600;
+    line-height: 133px;
+    color: white;
+    text-align: center;
+  }
+  > p {
+    font-size: 18px;
+    font-family: var(--plus-jakarta-sans);
+    font-weight: 300;
+    line-height: 36px;
+    margin-top: 32px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.subsription__form {
+  min-width: 480px;
+  margin-top: 40px;
+  padding: 14px 14px 14px 24px;
+
+  display: flex;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 46px;
+
+  > input {
+    background: transparent;
+    outline: none;
+    border: none;
+    flex: 1;
+    font-size: 16px;
+    font-weight: 400px;
+    font-family: var(--plus-jakarta-sans);
+    color: white;
+    opacity: 0.5;
+    &::placeholder {
+      color: white;
+      opacity: 0.5;
+    }
+  }
+
+  > button {
+    padding: 20px;
+    min-width: 180px;
+    font-size: 16px;
+    font-family: var(--plus-jakarta-sans);
+    font-weight: 500;
+    color: white;
+    background: var(--black-400);
+    cursor: pointer;
+    border-radius: inherit;
+  }
+}
+
+/*FOOTER*/
+
+.footer {
+  width: 100%;
+  padding: 20px 40px;
+  background: var(--color-white);
+  flex-wrap: wrap;
+  gap: 20px;
+  overflow: hidden;
+  > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+  }
+}
+
+.footer__logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: var(--playfair-display);
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  cursor: pointer;
+  > span {
+    color: var(--primary-color);
+  }
+}
+
+.footer__nav {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--plus-jakarta-sans);
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.footer__social {
+  > li {
+    width: 42px;
+    height: 42px;
+    background-color: var(--secondary-color);
+    border-radius: 100%;
+  }
+  > img{
+    width: 45%;
+    height: 45%;
+    object-fit: contain;
+  }
 }
